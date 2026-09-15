@@ -742,3 +742,19 @@ header h1 {
 .placeholder-name { opacity: 0.45; font-style: italic; }
 .placeholder-score { opacity: 0.35; font-size: 1.5em !important; }
 .snowflake::before { content: '🦇'; font-style: normal; }
+
+/* --- Indicateur de chargement --- */
+.loading-indicator {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #8b5a2b; /* Couleur chocolat */
+    margin: 20px 0;
+    font-weight: 600;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}

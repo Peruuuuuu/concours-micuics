@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchDataAndBuildLeaderboard() {
         try {
+            if (loadingIndicator) loadingIndicator.style.display = 'block';
             // Ajout d'un timestamp pour forcer le rechargement du fichier et éviter le cache du navigateur
             const response = await fetch(csvUrl + '&timestamp=' + new Date().getTime());
             if (!response.ok) {
@@ -107,9 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
             buildPodium(participants);
             buildList(participants.slice(3));
 
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
+
         } catch (error) {
             console.error('Impossible de charger le classement :', error);
             remainingCountSpan.textContent = 'Erreur';
+            if (loadingIndicator) loadingIndicator.textContent = '❌ Erreur de chargement.';
         }
     }
 
@@ -221,4 +225,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchDataAndBuildLeaderboard();
 
+    setInterval(fetchDataAndBuildLeaderboard, 60000);
 });

@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const leaderboardList = document.getElementById('leaderboard-list');
     const warningEl = document.querySelector('.warning');
 
+    const loadingIndicator = document.getElementById('loading-indicator');
+
     // --- Références modifiables pour les lots du podium ---
     // Modifiez ces valeurs ici (facilement remplaçables)
     const podiumReferences = ['Projecteur NeoPix 140 HD', 'Air Fryer MEDEK RA610DV 6L', '1h avec PB🥵'];

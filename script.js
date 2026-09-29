@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buildPodium(topThree) {
         const medalInfo = [
-            { class: 'gold', image: 'TV.jpg' },
+            { class: 'gold', image: 'TV.jpeg' },
             { class: 'silver', image: 'Appareil_raclette.jpg' },
             { class: 'bronze', image: 'Pouf.jpg' }
         ];

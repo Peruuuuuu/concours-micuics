@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Références modifiables pour les lots du podium ---
     // Modifiez ces valeurs ici (facilement remplaçables)
-    const podiumReferences = ['Projecteur NeoPix 140 HD', 'Air Fryer MEDEK RA610DV 6L', '1h avec PB🥵'];
+    const podiumReferences = ['TV LED LISTO 32HD964 32"', 'Appareil à raclette, grill et pierre à griller 8 personnes RA-2752CA TRISTAR ', 'Highdi Pouf 100 x 120 cm'];
 
     // --- POPUP: affiché à chaque ouverture ---
     const popupModal = document.getElementById('popupModal');
@@ -121,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buildPodium(topThree) {
         const medalInfo = [
-            { class: 'gold', image: 'np.png' },
-            { class: 'silver', image: 'af.png' },
-            { class: 'bronze', image: 'PB.png' }
+            { class: 'gold', image: 'TV.jpg' },
+            { class: 'silver', image: 'Appareil_raclette.jpg' },
+            { class: 'bronze', image: 'Pouf.jpg' }
         ];
 
         // Toujours créer 3 places, même s'il n'y a pas encore assez de participants
